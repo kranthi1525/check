@@ -84,11 +84,14 @@ body {
         gap: 90px;
         width: 80rem;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: fit-content;
         transition: 0.5s;
         overflow-x: hidden;
         padding: 70px;
+       
       }
 
       .slide-col {
@@ -139,6 +142,37 @@ body {
         font-weight: 400;
         line-height: 1.3;
       }
+      .col-md-8 {
+        text-align: start;
+      }
+
+      #fil {
+    background-color: transparent;
+    border:1px solid #06BBCC;
+    color: #06BBCC;
+   
+    padding: 6px 12px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btnn.active {
+    background-color: #06BBCC;
+    color: white;
+  }
+  
+  
+  #fil:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+      
 
       .content h2 {
         font-size: 1.5rem;
@@ -161,6 +195,9 @@ body {
       .btn.active {
         width: 30px;
       }
+      .tt{
+        text-align: start;
+      }
 
       .slider {
         width: 100%;
@@ -172,6 +209,7 @@ body {
           justify-content: center;
           align-items: center;
         padding: 4%;
+
         }
         .slide-col {
           width: 40%;
@@ -202,39 +240,18 @@ body {
         }
       }
 
-      /* @media (max-width: 850px) {
-        main {
-          width: 500px;
-        }
-
-        .slide-row {
-          width: 2000px;
-        }
-
-        .slide-col {
-          width: 500px;
-          height: 250px;
-        }
-
-        .hero img {
-          width: 200px;
-        }
-
-        .content {
-          width: 320px;
-          height: 200px;
-          padding: 20px;
-        }
-
-        .content p {
-          font-size: 0.9rem;
-        }
-
-        .content h2 {
-          font-size: 1.2rem;
-          margin-top: 20px;
-        }
-      } */
+      @media (max-width:1880px) {
+       .onei{
+        border: 1px solid black;
+       }
+       .slide-col{
+        width: 45%;
+       
+       }
+       .content{
+        z-index: -1000;
+       }
+      } 
 
       @media (max-width: 550px) {
         main {
@@ -243,6 +260,9 @@ body {
 
         .slide-row {
           width: 1200px;
+        }
+        .onei{
+          flex-direction: column;
         }
 
         .slide-col {
@@ -315,9 +335,7 @@ body {
             rgba(24, 29, 56, 0.7),
             rgba(24, 29, 56, 0.7)
           ),
-          url(https://www.cumbria.ac.uk/media/university-of-cumbria-website/content-assets/images/rhd/masthead-1440-x-535/Alumni-Header-Image.jpg);
-      "
-    >
+          url(https://www.cumbria.ac.uk/media/university-of-cumbria-website/content-assets/images/rhd/masthead-1440-x-535/Alumni-Header-Image.jpg);">
       <div class="container py-5">
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center">
@@ -385,6 +403,20 @@ body {
     </div> -->
     <!-- Testimonial End -->
 
+    
+
+    <div class="text-center">
+      <h6 class="section-title bg-white text-center text-primary px-3">
+        Alumni
+      </h6>
+      <div class="mb-3" style="justify-content: center;display: flex;align-items: center;gap: 30px;">
+        <button class="btn btn-primary filter-btn btnn" data-filter="all" id="fil">All</button>
+        <button class="btn btn-primary filter-btn btnn" data-filter="b.tech" id="fil">B.Tech</button>
+        <button class="btn btn-primary filter-btn btnn" data-filter="m.tech" id="fil">M.Tech</button>
+      </div>
+  
+      
+
     <div class="modal fade" id="alumniModal" tabindex="-1" aria-labelledby="alumniModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -417,11 +449,7 @@ body {
 
 
     <div class="text-center">
-      <h6 class="section-title bg-white text-center text-primary px-3">
-        Alumni
-      </h6>
-      <h1 class="mb-5">Our Students Say!</h1>
-    </div>
+      
 
     <div class="bd">
       <main>
@@ -440,7 +468,7 @@ body {
                   <div class="tt" style="width: 50%; ">
                     <h2>Kakarla Divya Sree</h2>
                     <p>B.Tech. | NIT Rourkela</p>
-                    <button class="btn btn-primary mx-1 " style="" data-toggle="modal" data-target="#alumniModal" data-alumnus-index="">View Details</button>
+                    <button class="btn btn-primary mx-1 "  data-toggle="modal" data-target="#alumniModal" data-alumnus-index="">View Details</button>
                     <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
                   
                       <a class="btn btn-sm-square btn-primary mx-1" href=""
@@ -482,7 +510,7 @@ body {
                 >
                   <div class="tt" style="width: 50%; ">
                     <h2>Garima Singhal</h2>
-                    <p>B.Tech. | NIT Rourkela</p>
+                    <p>M.Tech. | NIT Rourkela</p>
                     <button class="btn btn-primary mx-1 " style="" data-toggle="modal" data-target="#alumniModal" data-alumnus-index="1">View Details</button>
                     <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
                   
@@ -525,7 +553,7 @@ body {
                 >
                   <div class="tt" >
                     <h2>Chekka Jaya Gayatri</h2>
-                    <p>Systems Engineer | TCS</p>
+                    <p>M.Tech |Systems Engineer | TCS</p>
                     <button class="btn btn-primary mx-1 " style="" data-toggle="modal" data-target="#alumniModal" data-alumnus-index="1">View Details</button>
                     <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
                   
@@ -566,7 +594,7 @@ body {
                 <div 
                   style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
                 >
-                  <div class="tt" style="width: 50%; ">
+                  <div class="tt" >
                     <h2>Vikram Kumar</h2>
                     <p>B.Tech. | NIT Rourkela</p>
                     <button class="btn btn-primary mx-1 " style="" data-toggle="modal" data-target="#alumniModal" data-alumnus-index="3">View Details</button>
@@ -611,8 +639,8 @@ body {
                   style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
                 >
                   <div class="tt" style="width: 50%; ">
-                    <h2>Usha Rani Kandukuri</h2>
-                    <p>B.Tech. | NIT Rourkela</p>
+                    <h2 style="width: 250px;">Usha Rani Kandukuri</h2>
+                    <p>M.Tech. | NIT Rourkela</p>
                     <button class="btn btn-primary mx-1 "  data-toggle="modal" data-target="#alumniModal" data-alumnus-index="4">View Details</button>
                     <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
                   
@@ -648,6 +676,7 @@ body {
   {
     name: "Kakarla Divya Sree",
     image: "img/alumini1.png",
+    degree: "B.Tech",
     gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "B.Tech. | NIT Rourkela",
@@ -670,6 +699,7 @@ body {
   {
     name: "Garima Singhal",
     image: "img/alumini2.png",
+    degree: "M.Tech",
     gallery: ["img/gallery7.jpg", "img/gallery8.jpg", "img/gallery9.jpg"],
     details: [
       "Treymont Inc.",
@@ -690,6 +720,7 @@ body {
   {
     name: "Chekka Jaya Gayatri",
     image: "img/alumini3.png",
+    degree: "M.Tech",
     gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "Systems Engineer | TCS",
@@ -709,6 +740,7 @@ body {
   {
     name: "Vikram Kumar",
     image: "img/alumini4.png",
+    degree: "B.Tech",
     gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "B.Tech. | NIT Rourkela",
@@ -729,9 +761,10 @@ body {
   {
     name: "Usha Rani Kandukuri",
     image: "img/alumini5.png",
+    degree: "M.Tech",
     gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
-      "B.Tech. | NIT Rourkela",
+      "M.Tech. | NIT Rourkela",
       "GENERAL PROGRAMMING C,Python,Embedded C, MATLAB.",
       "Statistical Learning and Linear Programming at Tata Institute Of Fundamental Research (TIFR)",
       "Certifications on C,C++,Python,ML from Internshala[2021]",
@@ -758,6 +791,28 @@ const alumniModalWorkExperiences = document.getElementById("alumniModalWorkExper
 const alumniModalProjects = document.getElementById("alumniModalProjects");
 
 const viewDetailsButtons = document.querySelectorAll("[data-alumnus-index]");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const slideColumns = document.querySelectorAll(".slide-col");
+
+function filterAlumni(filter) {
+  slideColumns.forEach((column, index) => {
+    const alumnus = alumniData[index];
+    if (filter === 'all' || alumnus.degree.toLowerCase() === filter.toLowerCase()) {
+      column.style.display = 'block';
+    } else {
+      column.style.display = 'none';
+    }
+  });
+}
+
+// Add click event listeners to filter buttons
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+    filterAlumni(filter);
+  });
+});
+
 
 viewDetailsButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
