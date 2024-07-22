@@ -36,7 +36,7 @@
 
     <style>
       /* Add these styles to your existing CSS file */
-
+      @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
       .modal {
         display: none;
         position: fixed;
@@ -127,6 +127,19 @@
         text-align: center;
         margin-bottom: 20px;
       }
+      .modal-body h3{
+        border-bottom: 2px solid #06bbcc;
+        margin-top: 30px;
+      }
+      .modal-body h2{
+        color: #06bbcc;
+        border-bottom: 2px solid black;
+        margin-bottom: 30px;
+      }
+        .modal-body ul li{
+          font-family: "Jost", sans-serif;
+
+        }
     </style>
   </head>
 
@@ -321,7 +334,7 @@
                 <h5 class="mb-4">
                   Biomedical Signal Processing<br>(BM3603)
                 </h5>
-                <h5 class="mb-4" style="padding: 20px;">
+                <h5 class="mb-4" style="padding: 17px;">
                   
                   (B.Tech.)
 
@@ -515,32 +528,81 @@
       // Course syllabuses
       const courseSyllabuses = {
         BM3603: `
-    <h2>Course 1 Syllabus</h2>
-    <ol>
-      <li>Introduction to the Course</li>
-      <li>Topic 1 Details</li>
-      <li>Topic 2 Details</li>
-      <li>Topic 3 Details</li>
-    </ol>
+    <h2>BM3603  - BIOMEDICAL SIGNAL PROCESSING</h2>
+    <ul>
+      <p>Basic biomedical signals, Basic signals and its classification, Introduction to digital signal processing, Introduction to discrete-time signals and systems, Sampling Theorem, Fourier Transform, Discrete Fourier Transform, Fast Fourier transform algorithms, Laplace Transform, Z-Transform, Filter designing by placement of poles and zeros, Design and analysis of infinite impulse response (IIR) digital filters, Design and analysis of finite impulse response (FIR) filter design, Realization of digital systems, Medical applications of digital signal processing.</p>
+      <h3>Course Objectives:</h3>
+      <li> To understand basic/biomedical signals and to implement different mathematical operations on signals</li>
+      <li> To be able to apply knowledge of the signal processing techniques on signals</li>
+      <li> To provide knowledge on signal transformations</li>
+      <li> To make familiar with the practical implementation of the digital filters</li>
+      <h3>Course Outcome:</h3>
+      <li>At the end of the course, the students will be able to:</li>
+      <li> Apply the knowledge of mathematical operations to biomedical signals.</li>
+      <li> Understand the process of sampling and the effects of under sampling.</li>
+      <li> Apply the Fourier transform, Laplace transform and Z- transform to analyze of continuous-time and discrete-time</li>
+      <li> Design and implement digital (FIR, IIR) filters.</li>
+      <li> Apply digital signal processing techniques on biomedical signals.</li>
+      <h3>Essential Reading:</h3>
+      <li> John G. Proakis and Dimitris G. Manolakis, Digital signal processing: principles, algorithms, and applications, Pearson Prentice Hall , 2007</li>
+      <li> Richard G Lyons, Understanding Digital Signal Processing, Pearson Education India , Third Edition, 2004</li>
+      <h3>Supplementary Reading:</h3>
+      <li> Sanjay Sharma, Digital Signal Processing: with MATLAB Programs, S.K. Kataria & Sons , 2013</li>
+      <li> Steven Smith, Digital signal processing: a practical guide for engineers and scientists, Newnes , 2013</li>
+
+    </ul>
   `,
         BM3604: `
-    <h2>Course 2 Syllabus</h2>
-    <ol>
-      <li>Overview of the Subject</li>
-      <li>Fundamental Concepts</li>
-      <li>Advanced Topics</li>
-      <li>Case Studies</li>
-      <li>Final Project</li>
-    </ol>
+    <h2>BM3604  - MEDICAL IMAGING AND IMAGE PROCESSING</h2>
+    <ul>
+      <p>Medical imaging systems: X-rays based imaging systems, Gamma-rays based imaging systems, Ultrasound based imaging systems, MRI imaging
+Fundamentals of digital image processing: Components of an image processing system, Digital image representation, Digital images, Applications of image processing
+Image transforms: 2D-DFT, 2D-DCT, 2D-DST, Hadamard transform, Haar transform, Walsh transform
+Image enhancement in spatial domain: Point processing (Identity transformation, Image negative, Brightness and contrast modification, log transformation, Power law transformation, Contrast stretching, Intensity level slicing, Bit plane slicing, Histogram processing), Local enhancement, Multi-image operation (Image substraction, Image addition, Boolean operation), Spatial filtering
+Image enhancement in frequency domain: Smoothing filters, Sharpening filters, Unsharp masking, High boost filtering, Homomorphic filtering, Notch filters
+Image restoration: Image degradation/ restoration model, Image noises,Image compression: Lossless compression schemes, Lossy compression schemes, Image denoising
+Image segmentation: Edge based segmentation, Threshold based segmentation, Region based segmentation, Clustering techniques, Watershed algorithm
+Colour image processing: Colour spaces, Pseudo-colour image processing, Full Colour image processing Applications of image processing in medical industries</p>
+      <h3>Course Objectives:</h3>
+      <li> To learn the basic fundamentals of medical imaging systems</li>
+      <li> To learn the basics of digital image processing techniques</li>
+      <li> To have an understanding on the application of digital image processing techniques on medical images</li>
+
+      <h3>Course Outcome:</h3>
+      <p>At the end of the course, the students will be able to:</p>
+      <li> Successfully explain the basics of different medical imaging systems</li>
+      <li> Explain the fundamental concepts of digital image processing, including color image processing</li>
+      <li> Apply the Fourier transform, Laplace transform and Z- transform to analyze of continuous-time and discrete-time</li>
+      <li> Apply image transformation techniques to the digital images</li>
+      <li> Apply image enhancement, image restoration, image compression, and image segmentation techniques to the digital images</li>
+      <li>Explain the applications of image processing in medical industries</li>
+      <h3>Essential Reading:</h3>
+      <li> W. Birkfellner, Applied Medical Image Processing: A Basic Course, CRC Press , Second Edition, 2014</li>
+      <li>  I. Bankman, Handbook of Medical Image Processing and Analysis, Academic Press , Second Edition, 2008</li>
+      <h3>Supplementary Reading:</h3>
+      <li> R. C. Gonzalez, Digital Image Processing, Pearson Education India , Third Edition, 2013</li>
+      <li> S. Jayaraman, T. Veerakumar, S. Esakkirajan, Digital Image Processing, McGraw Hill Education , 2017</li>
+
+    </ul>
   `,
         BM6332: `
-    <h2>Course 3 Syllabus</h2>
+    <h2>BM6332  - MEDICAL IMAGING AND IMAGE PROCESSING</h2>
     <ul>
-      <li>Module 1: Introduction</li>
-      <li>Module 2: Core Principles</li>
-      <li>Module 3: Practical Applications</li>
-      <li>Module 4: Emerging Trends</li>
-      <li>Module 5: Final Assessment</li>
+      <p>Medical imaging systems: Medical images obtained with ionizing radiations, Medical images obtained with non-ionizing radiations. Fundamentals of Digital Image Processing, Image enhancement in spatial domain, Image enhancement in frequency domain, Image restoration, Morphological image processing, Image segmentation, Image compression, Fundamentals of color image processing, Feature recognition and classification, 3D visualization, Machine vision, Medical applications of imaging</p>
+      <h3>Course Objectives:</h3>
+      <li> To learn the basic fundamentals of medical imaging systems</li>
+      <li> To learn the basics of digital image processing techniques</li>
+      <li> To have an understanding on the application of digital image processing techniques on medical images</li>
+
+      <h3>Course Outcome:</h3>
+      <p>The students will gain knowledge on the basic principles of medical imaging systems and the applications of image processing techniques on medical images</p>
+      <h3>Essential Reading:</h3>
+      <li>  W. Birkfellner, Applied Medical Image Processing: A Basic Course, CRC Press , Second Edition, 2014</li>
+      <li>  I. Bankman, Handbook of Medical Image Processing and Analysis, Academic Press , Second Edition, 2008</li>
+      <h3>Supplementary Reading:</h3>
+      <li>  R. C. Gonzalez, Digital Image Processing, Pearson Education India , Third Edition, 2013</li>
+      <li> S. Jayaraman, T. Veerakumar, S. Esakkirajan, Digital Image Processing, McGraw Hill Education , 2017</li>
+
     </ul>
   `,
   BM3704: `
@@ -620,37 +682,47 @@
 
       // Function to download the syllabus as a JPG file
       function downloadSyllabus(syllabusId) {
-        var syllabusContent = courseSyllabuses[syllabusId];
+  var syllabusContent = courseSyllabuses[syllabusId];
+  
+  if (syllabusContent) {
+    // Create a temporary div element to render the syllabus content
+    var tempDiv = document.createElement("div");
+    tempDiv.innerHTML = syllabusContent;
+    
+    // Apply styles to reduce width and set a max-width
+    tempDiv.style.width = "600px";
+    tempDiv.style.maxWidth = "100%";
+    tempDiv.style.margin = "0 auto";
+    tempDiv.style.padding = "20px";
+    tempDiv.style.boxSizing = "border-box";
+    
+    document.body.appendChild(tempDiv);
 
-        if (syllabusContent) {
-          // Create a temporary div element to render the syllabus content
-          var tempDiv = document.createElement("div");
-          tempDiv.innerHTML = syllabusContent;
-          document.body.appendChild(tempDiv);
-
-          // Render the temporary div on the canvas
-          html2canvas(tempDiv, {
-            scale: 1, // Adjust the scale for better image quality
-            backgroundColor: "white", // Set the background color to transparent
-          }).then(function (canvas) {
-            // Convert the canvas to a data URL
-            var dataURL = canvas.toDataURL("image/jpeg");
-
-            // Create a temporary link element
-            var link = document.createElement("a");
-            link.download = `syllabus-${syllabusId}.jpg`; // Set the desired file name
-            link.href = dataURL;
-
-            // Programmatically click the link to trigger the download
-            link.click();
-
-            // Remove the temporary div from the DOM
-            document.body.removeChild(tempDiv);
-          });
-        } else {
-          console.error("Syllabus content not found.");
-        }
-      }
+    // Render the temporary div on the canvas
+    html2canvas(tempDiv, {
+      scale: 2, // Increase scale for better image quality
+      backgroundColor: "white",
+      width: 700, // Set the width of the canvas
+      windowWidth: 600 // Set the window width to match
+    }).then(function (canvas) {
+      // Convert the canvas to a data URL
+      var dataURL = canvas.toDataURL("image/jpeg", 0.9); // Adjust quality if needed
+      
+      // Create a temporary link element
+      var link = document.createElement("a");
+      link.download = `syllabus-${syllabusId}.jpg`; // Set the desired file name
+      link.href = dataURL;
+      
+      // Programmatically click the link to trigger the download
+      link.click();
+      
+      // Remove the temporary div from the DOM
+      document.body.removeChild(tempDiv);
+    });
+  } else {
+    console.error("Syllabus content not found.");
+  }
+}
     </script>
     <!-- Courses End -->
 
