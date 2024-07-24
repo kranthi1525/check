@@ -27,47 +27,59 @@
     <!-- Template Stylesheet -->
     <link href="style.css" rel="stylesheet">
     <style>
-        #noticeBox {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            padding: 30px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            position: relative;
+        .container7 {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        #noticeBox h2 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
-        #noticeBox p {
-            color: #34495e;
-            line-height: 1.6;
-        }
-        #closeButton {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 24px;
-            color: #bdc3c7;
-            transition: color 0.3s ease;
-        }
-        #closeButton:hover {
-            color: #95a5a6;
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+        .controls {
             display: flex;
-            z-index: 300000;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        select, input[type="text"] {
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .new-tag {
+            background-color: #ffff00;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 8px;
+        }
+        .pagination {
+            display: flex;
             justify-content: center;
-            align-items: center;
+            gap: 10px;
+        }
+        .pagination button {
+            padding: 5px 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .pagination button.active {
+            background-color: #4CAF50;
+            color: white;
         }
     </style>
 </head>
@@ -116,7 +128,7 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">loram ipsum</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Lorem ipsum dolor sit amet.</h1>
+                                <h1 class="display-3 text-white animated slideInDown">Bio Signal and Medical Image Processing Laboratory</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aut beatae omnis fugit pariatur doloribus!</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
@@ -132,7 +144,7 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">loram ipsum</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Lorem ipsum dolor sit amet.</h1>
+                                <h1 class="display-3 text-white animated slideInDown">Bio Signal and Medical Image Processing Laboratory</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aut beatae omnis fugit pariatur doloribus!</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
@@ -144,6 +156,7 @@
         </div>
     </div>
     <!-- Carousel End -->
+     
 
 
     <!-- Service Start -->
@@ -233,14 +246,179 @@
     </div>
     <!-- About End -->
 
+<!-- notice Start -->
+<div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-primary px-3">Notifications</h6>
+       
+    </div>
+</div>
+<div class="container7">
+    
+    <div class="controls">
+        <div>
+            Show 
+            <select id="entriesPerPage">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            Circulars
+        </div>
+        <div>
+            Search: <input type="text" id="searchInput">
+        </div>
+    </div>
+    <table id="notificationsTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Circulars & Notifications</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Table rows will be inserted here by JavaScript -->
+        </tbody>
+    </table>
+    <div id="paginationInfo"></div>
+    <div id="pagination" class="pagination"></div>
+</div>
 
+<script>
+    const notifications = [
+{ date: "19-Jul-2024", message: "TOMORROW IS A WORKING DAY ( 3RD SATURDAY - 20.07.2024 ) INFORMATION" },
+{ date: "04-Jul-2024", message: "Invitation for registration of 8th Graduation Day scheduled on 27th July 2024. Click Here for 8th Graduation day registration", isNew: true },
+{ date: "26-Jun-2024", message: "B.TECH FINAL YEAR STUDENTS TRANPORT FEE PAYMENT PURPOSE CIRCULAR", isNew: true },
+{ date: "25-Jun-2024", message: "111th MANN KI BAAT PROGRAMME INFORMATION TO STUDENTS", isNew: true },
+{ date: "25-Jun-2024", message: "BLOOD CAMP ON 01-07-2024", isNew: true },
+{ date: "20-Jun-2024", message: "I M. Tech. II Semester Regular (AR22) and Supplementary ( AR19) examinations notification, July 2024.", isNew: true },
+{ date: "18-Jun-2024", message: "IV Semester MBA Regular (AR22) and Supplementary ( AR19) Examinations April 2024 Revaluation/Recounting  notification.", isNew: true },
+{ date: "15-Jun-2024", message: "17.06.2024 MONDAY - BAKRID HOLIDAY INFORMATION TO STAFF & STUDENTS", isNew: true },
+{ date: "11-Jun-2024", message: "II B.Tech II Semester Supplementary (AR20,18,16) examinations notification, June 2024.", isNew: true },
+{ date: "11-Jun-2024", message: "Revised I B.Tech II Semester Mid II Time Table", isNew: true },
+{ date: "08-Jun-2024", message: "Annual Sports Meet Registration Open - Click here to register", isNew: true },
+{ date: "05-Jun-2024", message: "World Environment Day - Campus Clean-up Drive on 10th June" },
+{ date: "01-Jun-2024", message: "Summer Internship Opportunities - Apply Now!", isNew: true },
+{ date: "28-May-2024", message: "Library Hours Extended for Final Exam Preparation" },
+{ date: "25-May-2024", message: "Guest Lecture Series: 'Future of AI in Engineering' on 5th June" },
+{ date: "22-May-2024", message: "Online Course Registration for Fall Semester 2024 Begins on 1st June" },
+{ date: "20-May-2024", message: "Campus Wi-Fi Upgrade Scheduled for 25th-26th May" },
+{ date: "18-May-2024", message: "Career Fair 2024 - Save the Date: 15th July" },
+{ date: "15-May-2024", message: "New Scholarship Opportunities for International Students" },
+{ date: "12-May-2024", message: "Mental Health Awareness Week: Free Counseling Sessions Available" },
+{ date: "10-May-2024", message: "Faculty Research Symposium - Call for Papers" },
+{ date: "08-May-2024", message: "Campus Sustainability Initiative: Solar Panel Installation Begins" },
+{ date: "05-May-2024", message: "Student Council Elections - Nominations Open from 10th May" },
+{ date: "02-May-2024", message: "New Online Learning Resources Available in Student Portal" },
+{ date: "30-Apr-2024", message: "Upcoming Maintenance: Student Information System Downtime on 5th May" },
+{ date: "28-Apr-2024", message: "Alumni Mentorship Program Launch - Sign Up Now!" },
+{ date: "25-Apr-2024", message: "International Cultural Festival - Call for Performances" },
+{ date: "22-Apr-2024", message: "Earth Day Celebration: Tree Planting Ceremony on Campus" }
+];
+
+    let currentPage = 1;
+    let entriesPerPage = 10;
+    let filteredNotifications = [...notifications];
+
+    function displayNotifications() {
+        const tableBody = document.getElementById('tableBody');
+        tableBody.innerHTML = '';
+
+        const start = (currentPage - 1) * entriesPerPage;
+        const end = start + entriesPerPage;
+        const paginatedNotifications = filteredNotifications.slice(start, end);
+
+        paginatedNotifications.forEach(notification => {
+            const row = tableBody.insertRow();
+            const dateCell = row.insertCell(0);
+            const messageCell = row.insertCell(1);
+            
+            dateCell.textContent = notification.date;
+            messageCell.innerHTML = notification.message;
+            
+            if (notification.isNew) {
+                const newTag = document.createElement('span');
+                newTag.textContent = 'NEW';
+                newTag.className = 'new-tag';
+                messageCell.appendChild(newTag);
+            }
+        });
+
+        updatePaginationInfo();
+        updatePaginationButtons();
+    }
+
+    function updatePaginationInfo() {
+        const info = document.getElementById('paginationInfo');
+        const start = (currentPage - 1) * entriesPerPage + 1;
+        const end = Math.min(currentPage * entriesPerPage, filteredNotifications.length);
+        info.textContent = `Showing ${start} to ${end} of ${filteredNotifications.length} Circulars and Notifications`;
+    }
+
+    function updatePaginationButtons() {
+        const pagination = document.getElementById('pagination');
+        pagination.innerHTML = '';
+
+        const totalPages = Math.ceil(filteredNotifications.length / entriesPerPage);
+
+        const prevButton = document.createElement('button');
+        prevButton.textContent = 'Previous';
+        prevButton.onclick = () => changePage(currentPage - 1);
+        prevButton.disabled = currentPage === 1;
+        pagination.appendChild(prevButton);
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i;
+            pageButton.onclick = () => changePage(i);
+            if (i === currentPage) pageButton.classList.add('active');
+            pagination.appendChild(pageButton);
+        }
+
+        const nextButton = document.createElement('button');
+        nextButton.textContent = 'Next';
+        nextButton.onclick = () => changePage(currentPage + 1);
+        nextButton.disabled = currentPage === totalPages;
+        pagination.appendChild(nextButton);
+    }
+
+    function changePage(newPage) {
+        currentPage = newPage;
+        displayNotifications();
+    }
+
+    function handleSearch() {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        filteredNotifications = notifications.filter(notification => 
+            notification.message.toLowerCase().includes(searchTerm) ||
+            notification.date.toLowerCase().includes(searchTerm)
+        );
+        currentPage = 1;
+        displayNotifications();
+    }
+
+    document.getElementById('searchInput').addEventListener('input', handleSearch);
+
+    document.getElementById('entriesPerPage').addEventListener('change', function() {
+        entriesPerPage = parseInt(this.value);
+        currentPage = 1;
+        displayNotifications();
+    });
+
+    // Initial display
+    displayNotifications();
+</script>
+
+
+<!-- notice End -->
     <!-- Categories Start -->
     <div class="container-xxl py-5 category">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Events</h6>
-                <h1 class="mb-5">Workshops</h1>
-            </div>
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-white text-center text-primary px-3">Events</h6>
+                    <h1 class="mb-5">Workshops</h1>
+                </div>
             <div class="row g-3">
                 <div class="col-lg-7 col-md-6">
                     <div class="row g-3">
@@ -288,9 +466,7 @@
     <!-- Categories Start -->
 
 
-    <!-- Courses Start -->
     
-    <!-- Courses End -->
 
 
     <!-- Team Start -->
