@@ -51,111 +51,90 @@ header {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 20px auto;
   position: relative;
   min-height: 100vh; /* or a larger fixed value */
 }
-
-.facility-slider {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.facility-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.facility-image {
-  flex: 1;
-  padding: 1rem;
-}
-
-.facility-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.facility-content {
-  flex: 1;
-  padding: 1rem;
-  text-align: center;
-}
-
-.facility-content h2 {
-  margin-bottom: 1rem;
-}
-
-
-
-
-
-.facility-content {
-  display: flex;
-  align-items: center;
-}
-
-.facility-image {
-  flex: 0 0 auto;
-  width: 50%;
-  margin-right: 2rem;
-}
-
-.facility-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.table-responsive {
-  overflow-x: auto;
-}
-
-.table {
-  width: 100%;
-  max-width: 600px;
-  margin: 0;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.table th,
-.table td {
-  padding: 12px 15px;
-  text-align: left;
-  border: none;
-}
-
-.table-heading {
-  background-color: #333;
-  color: #fff;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: #f8f9fa;
-}
-
-.table-hover tbody tr:hover {
-  background-color: #e9ecef;
-}
-
-.table i {
-  margin-right: 8px;
-  color: #29C4D4;
-}
-
-
-
+.facility-container {
+          
+          padding: 2rem;
+          max-width: 1600px;
+          margin: 0 auto;
+          columns: 400px;
+          gap: 2rem;
+          padding: 2rem;
+      }
+     
+      .facility-card {
+          background-color: white;
+          border-radius: 16px;
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+          display: flex;
+          flex-direction: column;
+         margin-bottom: 20px;
+          overflow: hidden;
+          height: max-content;
+      }
+      .facility-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+      .facility-image {
+          width: 100%;
+          /* object-fit: cover; */
+      }
+      .facility-content {
+          padding: 1.5rem;
+          flex-grow: 1;
+      }
+      .facility-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1.5rem;
+      }
+      .facility-header h3 {
+          font-size: 1.5rem;
+          color: #2c3e50;
+          font-weight: 600;
+      }
+      .facility-specs {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          font-size: 0.875rem;
+          color: #34495e;
+      }
+      .facility-specs dt {
+          font-weight: 600;
+          color: #2c3e50;
+      }
+      .facility-specs dd {
+          margin: 0;
+      }
+      .facility-specs i {
+          margin-right: 10px;
+          color: #29C4D4;
+          font-size: 1.2rem;
+      }
+      
+      @media screen and (max-width: 480px) {
+          
+          .facility-card {
+              padding: 0;
+          }
+          .facility-content {
+              padding: 1.5rem;
+          }
+          .facility-header h3 {
+              font-size: 1.25rem;
+          }
+          .facility-specs {
+              grid-template-columns: 1fr;
+          }
+      }
     </style>
 </head>
 
@@ -226,101 +205,90 @@ main {
 
     <!-- Testimonial Start -->
     <main>
-      <div class="facility-slide">
-        <div class="facility-content d-flex align-items-center">
-          <div class="facility-image me-4">
-            <img src="eqip2.png" alt="Chemistry Lab" class="img-fluid">
-          </div>
-          <div>
-            <h2>High Performance Computing</h2>
-            <div class="table-responsive">
-              <table class="table table-bordered table-hover">
-                <thead>
-                  <tr>
-                    <th>Component</th>
-                    <th>Specification</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><i class="fas fa-microchip"></i> CPU</td>
-                    <td>Intel Core i7 10700</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-laptop"></i> Motherboard</td>
-                    <td>B460M DS3H AC</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-memory"></i> RAM</td>
-                    <td>64GB DDR4</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-video"></i> GPU</td>
-                    <td>Nvidia GeForce RTX 3060 (12GB)</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-solid fa-sd-card"></i> SSD</td>
-                    <td>500GB</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-hdd"></i> HDD</td>
-                    <td>3.5TB</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <a href="#" class="btn btn-primary">Explore <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
+      <div class="facility-container">
+       
 
-      <div class="facility-slide">
-        <div class="facility-content d-flex align-items-center">
-          <div class="facility-image me-4">
-            <img src="eqip3.jpg" alt="Chemistry Lab" class="img-fluid">
-          </div>
-          <div>
-            <h2>High Performance Computing</h2>
-            <div class="table-responsive">
-              <table class="table table-bordered table-hover">
-                <thead>
-                  <tr>
-                    <th>Component</th>
-                    <th>Specification</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><i class="fas fa-microchip"></i> CPU</td>
-                    <td>Intel Core i7 10700</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-laptop"></i> Motherboard</td>
-                    <td>B460M DS3H AC</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-memory"></i> RAM</td>
-                    <td>64GB DDR4</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-video"></i> GPU</td>
-                    <td>Nvidia GeForce RTX 3060 (12GB)</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-solid fa-sd-card"></i> SSD</td>
-                    <td>500GB</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-hdd"></i> HDD</td>
-                    <td>3.5TB</td>
-                  </tr>
-                </tbody>
-              </table>
+        
+
+        <div class="facility-card">
+            <img src="eqip4.jpg" alt="Active Motor Noise Canceling" class="facility-image" style="aspect-ratio: 5/6;">
+            <div class="facility-content">
+                <div class="facility-header">
+                    <h3>Bambu Lab A1 3D printer</h3>
+                </div>
+                <div class="facility-specs">
+                    <dt><i class="fas fa-volume-up"></i> Noise Reduction</dt>
+                    <dd>Up to 20dB noise cancellation</dd>
+                    <dt><i class="fas fa-heartbeat"></i> Response Time</dt>
+                    <dd>Instantaneous compensation for motor vibrations</dd>
+                    <dt><i class="fas fa-signal"></i> Sensor Integration</dt>
+                    <dd>Synchronized with motor feedback signals</dd>
+                    <dt><i class="fas fa-check-circle"></i> Transparent Operation</dt>
+                    <dd>Seamless noise reduction without impacting motion</dd>
+                </div>
             </div>
-            <a href="#" class="btn btn-primary">Explore <i class="fas fa-arrow-right"></i></a>
-          </div>
         </div>
+        <div class="facility-card">
+          <img src="eqip2.png" alt="High Performance Computing" class="facility-image" style="aspect-ratio: 3/2;">
+          <div class="facility-content">
+              <div class="facility-header">
+                  <h3>High Performance Computing</h3>
+              </div>
+              <div class="facility-specs">
+                  <dt><i class="fas fa-microchip"></i> CPU</dt>
+                  <dd>	Intel Core i7 10700</dd>
+                  <dt><i class="fas fa-cog"></i> Motherboard</dt>
+                  <dd>B460M DS3H AC</dd>
+                  <dt><i class="fas fa-clock"></i> RAM</dt>
+                  <dd>64GB DDR4</dd>
+                  <dt><i class="fas fa-chart-line"></i> GPU</dt>
+                  <dd>Nvidia GeForce RTX 3060 (12GB)</dd>
+                  <dt><i class="fas fa-chart-line"></i> SSD</dt>
+                  <dd>	500GB</dd>
+                  <dt><i class="fas fa-chart-line"></i> HDD</dt>
+                  <dd>	3.5TB</dd>
+              </div>
+          </div>
       </div>
+        
+        <div class="facility-card">
+          <img src="eqip3.jpg" alt="All-metal Rail System" class="facility-image" style="aspect-ratio: 16/10;">
+          <div class="facility-content">
+              <div class="facility-header">
+                  <h3>All-metal Rail System</h3>
+              </div>
+              <div class="facility-specs">
+                  <!-- <dt><i class="fas fa-cogs"></i> Components</dt>
+                  <dd>Precision-engineered rails, carriages, and bearings</dd>
+                  <dt><i class="fas fa-wrench"></i> Durability</dt>
+                  <dd>High-strength, corrosion-resistant construction</dd>
+                  <dt><i class="fas fa-sync-alt"></i> Motion Control</dt>
+                  <dd>Smooth, accurate positioning with advanced algorithms</dd>
+                  <dt><i class="fas fa-tachometer-alt"></i> Speed</dt>
+                  <dd>Up to 300mm/s travel speed</dd> -->
+              </div>
+          </div>
+      </div>
+      <div class="facility-card">
+        <img src="eqip6.png" alt="RFID Sync" class="facility-image" style="aspect-ratio: 5/6;">
+        <div class="facility-content">
+            <div class="facility-header">
+                <h3>RFID Sync</h3>
+            </div>
+            <div class="facility-specs">
+                <dt><i class="fas fa-tags"></i> RFID Capabilities</dt>
+                <dd>Real-time synchronization with RFID tags</dd>
+                <dt><i class="fas fa-database"></i> Data Integration</dt>
+                <dd>Automatic updates to material tracking systems</dd>
+                <dt><i class="fas fa-bolt"></i> Processing Speed</dt>
+                <dd>Ultra-fast tag detection and association</dd>
+                <dt><i class="fas fa-lock"></i> Security</dt>
+                <dd>Encrypted communication and access control</dd>
+            </div>
+        </div>
+    </div>
+        
+    </div>
     </main>
     <!-- Testimonial End -->
         
