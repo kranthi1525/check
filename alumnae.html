@@ -664,7 +664,6 @@ body {
     name: "Kakarla Divya Sree",
     image: "img/alumini1.png",
     degree: "B.Tech",
-    gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "Fractal Analytics Pvt Ltd ,Data Engineer ,Bengaluru",
       "Academic Excellence Award[2017‐2019](Received academic excellence from Bhashyam Institution.)",
@@ -687,7 +686,6 @@ body {
     name: "Garima Singhal",
     image: "img/alumini2.png",
     degree: "M.Tech",
-    gallery: ["img/gallery7.jpg", "img/gallery8.jpg", "img/gallery9.jpg"],
     details: [
       "Treymont Inc.",
       " Secured All India Rank (AIR)- 573 in GATE Biotechnology 2022, conducted by IIT Kharagpur.",
@@ -708,7 +706,6 @@ body {
     name: "Chekka Jaya Gayatri",
     image: "img/alumini3.png",
     degree: "M.Tech",
-    gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "System Engineer, Tata Consultancy Services, Hyderabad",
       "Certified in Fundamentals of Azure by Microsoft.(2020)",
@@ -728,7 +725,6 @@ body {
     name: "Vikram Kumar",
     image: "img/alumini4.png",
     degree: "B.Tech",
-    gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       "Wolfram Research Inc, Cosultant( Quality Assurance Engineer), Bhubaneswar",
       "Web App for Obstructuve Sleep Apnea(OSA) Diagnosis based on Deep learning (2024‐CURRENT)",
@@ -749,7 +745,6 @@ body {
     name: "Usha Rani Kandukuri",
     image: "img/alumini5.png",
     degree: "M.Tech",
-    gallery: ["img/gallery1.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/gallery4.jpg", "img/gallery5.jpg", "img/gallery6.jpg"],
     details: [
       " Andhra Pradesh medtech zone,senior fellow,Visakhapatnam",
       "GENERAL PROGRAMMING C,Python,Embedded C, MATLAB.",
@@ -832,16 +827,7 @@ viewDetailsButtons.forEach((button, index) => {
       alumniModalProjects.appendChild(listItem);
     });
 
-    const galleryImages = alumnus.gallery.map((image) => {
-      const col = document.createElement("div");
-      col.classList.add("col-4", "mb-3");
-      const img = document.createElement("img");
-      img.src = image;
-      img.classList.add("img-fluid", "rounded");
-      img.alt = "Gallery Image";
-      col.appendChild(img);
-      return col;
-    });
+    
 
     galleryImages.forEach((imageCol) => {
       alumniModalGallery.appendChild(imageCol);
