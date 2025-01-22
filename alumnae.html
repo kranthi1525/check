@@ -250,7 +250,66 @@ body {
        }
       } 
 
+      @media (max-width: 550px) {
+        main {
+          width: 300px;
+        }
+
+        .slide-row {
+          width: 1200px;
+        }
+        .onei{
+          flex-direction: column;
+        }
+
+        .slide-col {
+          width: 500px;
+          height: 300px;
+        }
+
+        .hero {
+          top: 60%;
+          height: 100px;
+          z-index: 5;
+        }
+
+        .hero img {
+          width: 100px;
+        }
+
+        .content {
+          width: 300px;
+        }
+      } 
+      @media (max-width: 768px) {
+        .modal-dialog {
+          max-width: 90%; /* or a fixed pixel width if preferred */
+            margin: 1rem auto; 
+        }
+         .modal-body .row {
+          flex-direction: column; /*stack columns vertically */
+        }
+         .modal-body .col-md-4,
+        .modal-body .col-md-8 {
+          width: 100%;
+             margin-bottom: 20px;
+        }
+        .modal-body .col-md-4 {
+          padding-bottom: 10px;
+        }
+    
+        
+        .modal-body #alumniModalGallery{
+          display: flex;
+          flex-wrap: wrap;
+            gap: 5px;
+        }
+         .modal-body #alumniModalGallery .col-md-3 {
+          width: calc(100% / 4 - 10px); /*adjust to fit 4 image*/
+          
+        }
       
+    }
     </style>
   </head>
 
