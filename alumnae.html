@@ -250,37 +250,7 @@ body {
        }
       } 
 
-      @media (max-width: 550px) {
-        main {
-          width: 300px;
-        }
-
-        .slide-row {
-          width: 1200px;
-        }
-        .onei{
-          flex-direction: column;
-        }
-
-        .slide-col {
-          width: 500px;
-          height: 300px;
-        }
-
-        .hero {
-          top: 60%;
-          height: 100px;
-          z-index: 5;
-        }
-
-        .hero img {
-          width: 100px;
-        }
-
-        .content {
-          width: 300px;
-        }
-      } 
+      
     </style>
   </head>
 
@@ -413,429 +383,331 @@ body {
     
 
     <div class="text-center">
-      <h6 class="section-title bg-white text-center text-primary px-3">
-        Alumni
-      </h6>
+      <h6 class="section-title bg-white text-center text-primary px-3"> Alumni </h6>
       <div class="mb-3" style="justify-content: center;display: flex;align-items: center;gap: 30px;">
-        <button class="btn btn-primary filter-btn btnn" data-filter="all" id="fil">All</button>
-        <button class="btn btn-primary filter-btn btnn" data-filter="b.tech" id="fil">B.Tech</button>
-        <button class="btn btn-primary filter-btn btnn" data-filter="m.tech" id="fil">M.Tech</button>
+          <button class="btn btn-primary filter-btn btnn" data-filter="all" id="fil">All</button>
+          <button class="btn btn-primary filter-btn btnn" data-filter="b.tech" id="fil">B.Tech</button>
+          <button class="btn btn-primary filter-btn btnn" data-filter="m.tech" id="fil">M.Tech</button>
       </div>
-  
-      
-
-    <div class="modal fade" id="alumniModal" tabindex="-1" aria-labelledby="alumniModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="alumniModalLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-4">
-                <img id="alumniModalImage" src="" class="img-fluid rounded" alt="Alumni Photo">
-                <h5 class="mt-3">Image Gallery</h5>
-                <div id="alumniModalGallery" class="row g-2"></div>
+      <div class="modal fade" id="alumniModal" tabindex="-1" aria-labelledby="alumniModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="alumniModalLabel"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-md-4">
+                              <img id="alumniModalImage" src="" class="img-fluid rounded" alt="Alumni Photo">
+                              <h5 class="mt-3">Image Gallery</h5>
+                              <div id="alumniModalGallery" class="row g-2"></div>
+                          </div>
+                          <div class="col-md-8">
+                              <h4>About the Alumni</h4>
+                              <ul id="alumniModalDetails" class="list-unstyled mb-4"></ul>
+                              <h5>Work Experiences</h5>
+                              <ul id="alumniModalWorkExperiences" class="list-group list-group-flush"></ul>
+                              <h5 class="mt-4">Projects</h5>
+                              <ul id="alumniModalProjects" class="list-group list-group-flush"></ul>
+                          </div>
+                      </div>
+                  </div>
               </div>
-              <div class="col-md-8">
-                <h4>About the Alumni</h4>
-                <ul id="alumniModalDetails" class="list-unstyled mb-4"></ul>
-                <h5>Work Experiences</h5>
-                <ul id="alumniModalWorkExperiences" class="list-group list-group-flush"></ul>
-                <h5 class="mt-4">Projects</h5>
-                <ul id="alumniModalProjects" class="list-group list-group-flush"></ul>
-              </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
+      <div class="text-center">
+          <div class="bd">
+              <main>
+                  <div class="slid">
+                      <div class="onei">
+                          <div class="slide-col">
+                              <div class="content">
+                                  <!-- <p> Zen Doan is a business analyst, entrepreneur and media proprietor, and investor. She also known as the best selling book author. </p> -->
+                                  <div
+                                      style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;">
+                                      <div class="tt" style="width: 50%; ">
+                                          <h2>Kakarla Divya Sree</h2>
+                                          <p>Fractal Analytics Pvt Ltd | Data Engineer,Bengaluru</p>
+                                          <div class="d-flex justify-content-center"
+                                              style="margin: 20px;position: relative;left: -45px;">
+                                              <button class="btn btn-primary mx-1 viewDetailsBtn"
+                                                  data-alumnus-index="0">View Details</button>
+                                              <a class="btn btn-sm-square btn-primary mx-1"
+                                                  href="https://www.linkedin.com/in/kakarla-divya-sree-2a46891b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
+                                                  target="_blank" style="height: 40px;"><i
+                                                      class="fab fa-linkedin-in"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="hero">
+                                  <img src="img/alumini1.png" alt="avatar" />
+                              </div>
+                          </div>
+                          <div class="slide-col">
+                              <div class="content">
+                                  <!-- <p> Zen Doan is a business analyst, entrepreneur and media proprietor, and investor. She also known as the best selling book author. </p> -->
+                                  <div
+                                      style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;">
+                                      <div class="tt" style="width: 50%; ">
+                                          <h2>Garima Singhal</h2>
+                                          <p>Project associate<br>IIT roper</p>
+                                          <div class="d-flex justify-content-center"
+                                              style="margin: 20px;position: relative;left: -45px;">
+                                              <button class="btn btn-primary mx-1 viewDetailsBtn"
+                                                  data-alumnus-index="1">View Details</button>
+                                              <a class="btn btn-sm-square btn-primary mx-1"
+                                                  href="https://www.linkedin.com/in/garima-singhal-423b611b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                                  target="_blank" style="height: 40px;"><i
+                                                      class="fab fa-linkedin-in"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="hero">
+                                  <img src="img/alumini2.png" alt="avatar" />
+                              </div>
+                          </div>
+                          <div class="slide-col">
+                              <div class="content">
+                                  <!-- <p> Zen Doan is a business analyst, entrepreneur and media proprietor, and investor. She also known as the best selling book author. </p> -->
+                                  <div
+                                      style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;">
+                                      <div class="tt">
+                                          <h2>Chekka Jaya Gayatri</h2>
+                                          <p>System Engineer<br>TCS<br> Hyderabad</p>
+                                          <div class="d-flex justify-content-center"
+                                              style="margin: 20px;position: relative;left: -45px;">
+                                              <button class="btn btn-primary mx-1 viewDetailsBtn"
+                                                  data-alumnus-index="2">View Details</button>
+                                              <a class="btn btn-sm-square btn-primary mx-1"
+                                                  href="https://www.linkedin.com/in/gayatri-chekka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                                  target="_blank" style="height: 40px;"><i
+                                                      class="fab fa-linkedin-in"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="hero">
+                                  <img src="img/alumini3.png" alt="avatar" />
+                              </div>
+                          </div>
+                          <div class="slide-col">
+                              <div class="content">
+                                  <!-- <p> Zen Doan is a business analyst, entrepreneur and media proprietor, and investor. She also known as the best selling book author. </p> -->
+                                  <div
+                                      style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;">
+                                      <div class="tt">
+                                          <h2>Vikram Kumar</h2>
+                                          <p>Quality Assurance Engineer<br>Wolfram Research Inc<br>bhuvaneshwar</p>
+                                          <div class="d-flex justify-content-center"
+                                              style="margin: 20px;position: relative;left: -45px;">
+                                              <button class="btn btn-primary mx-1 viewDetailsBtn"
+                                                  data-alumnus-index="3">View Details</button>
+                                              <a class="btn btn-sm-square btn-primary mx-1"
+                                                  href="http://vikramk.netlify.app" target="_blank"
+                                                  style="height: 40px;"><i class="fab fa-linkedin-in"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="hero">
+                                  <img src="img/alumini4.png" alt="avatar" />
+                              </div>
+                          </div>
+                          <div class="slide-col">
+                              <div class="content">
+                                  <!-- <p> Zen Doan is a business analyst, entrepreneur and media proprietor, and investor. She also known as the best selling book author. </p> -->
+                                  <div
+                                      style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;">
+                                      <div class="tt" style="width: 50%; ">
+                                          <h2 style="width: 250px;">Usha Rani Kandukuri</h2>
+                                          <p>Andhra Pradesh medtech zone,Visakhapatnam</p>
+                                          <div class="d-flex justify-content-center"
+                                              style="margin: 20px;position: relative;left: -45px;">
+                                              <button class="btn btn-primary mx-1 viewDetailsBtn"
+                                                  data-alumnus-index="4">View Details</button>
+                                              <a class="btn btn-sm-square btn-primary mx-1"
+                                                  href="https://www.linkedin.com/in/usha-rani-kandukuri?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
+                                                  target="_blank" style="height: 40px;"><i
+                                                      class="fab fa-linkedin-in"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="hero">
+                                  <img src="img/alumini5.png" alt="avatar" />
+                              </div>
+                          </div>
+                      </div>
+                      <script>
+                          const alumniData = [
+                              {
+                                  name: "Kakarla Divya Sree",
+                                  image: "img/alumini1.png",
+                                  degree: "B.Tech",
+                                  details: [
+                                      "Fractal Analytics Pvt Ltd ,Data Engineer ,Bengaluru",
+                                      "Academic Excellence Award[2017‐2019](Received academic excellence from Bhashyam Institution.)",
+                                      "DP203 Microsoft Azure Associate Certification[2023]",
+                                      "Certifications on C,C++,Python,ML from Internshala[2021]",
+                                  ],
+                                  workExperiences: [
+                                      "Developed a strong proficiency in SQL, Python, PySpark, and gained practical experience in utilizing several Azure services.",
+                                      "Gained hands-on experience on working with Azure Databricks, Linked Services, and Azure Data Factory, where I have actively contributed to the design and implementation of numerous pipelines and triggers.",
+                                      "Trained to use ADF pipelines with medallion architecture and trigger pipeline runs along with logic apps to receive success message on successful run.",
+                                      "Data after distributed computing and several preprocessing techniques views are created using sql/spark pool in synapse",
+                                  ],
+                                  projects: [
+                                      "Python(MAY 2021) : Cricket Fantasy Application In this we develop GUI using Qt designer and the data base of cricketers. Application is built with respect to the conditions mentioned. we can select players from different categories and make a team which will be ev",
+                                      "Reinforcement Learning(MAY 2023) : Worked on finding the effective point care Diagnosis for sepsis patients using Reinforcent Learning.",
+                                      "Azure(May 2024) : Maintaining and debugging of pipelines with huge data.ETL operations and building new qlik dashboards",
+                                  ],
+                              },
+                              {
+                                  name: "Garima Singhal",
+                                  image: "img/alumini2.png",
+                                  degree: "M.Tech",
+                                  details: [
+                                      "Treymont Inc.",
+                                      " Secured All India Rank (AIR)- 573 in GATE Biotechnology 2022, conducted by IIT Kharagpur.",
+                                      "Recipient of Gold medal for B.Tech. in Biotechnology (Banasthali Vidyapith-2018-2022) ",
+                                  ],
+                                  workExperiences: [
+                                      "Optimizing Convolutional Neural Network (CNN) Models for Efficient Skin Cancer Classification: A Transfer Learning Approach under NIT Rourkela, Department of Biotechnology and Medical Engineering (Oct 2023 – Present)",
+                                      "A systematic review on the estimation of human upper airway volume using 2‐dimensional imaging modalities in validation with 3‐dimensional imaging modalities under NIT Rourkela, Department of Biotechnology and Medical Engineering (July 2023 ‐ Sept 2023)",
+                                      "Analyzing the effect of coffee consumption on visual pathway using Visual Evoked Potential (VEP) signals and machine learning algorithms under NIT Rourkela, Department of Biotechnology and Medical Engineering (May 2023 ‐ June 2023)",
+                                  ],
+                                  projects: [
+                                      "Understanding the degeneration of bone and cartilage during Aging and Osteoarthritis with Indian Institute of Technology (IIT), Ropar (June 2022 ‐ July 2022)",
+                                      "Implications of central metabolism in disease severity using in‐host modeling of SARS‐CoV2 infection with Indian Institute of Technology (IIT), Delhi, Department of Biochemical Engineering and Biotechnology (June 2021 ‐ Dec 2021)",
+                                      "Generation of antibodies against low molecular weight compounds with National Institute of Health and Family Welfare, Department of Reproductive BioMedicine, New Delhi (May 2020 ‐ June 2020)",
+                                  ],
+                              },
+                              {
+                                  name: "Chekka Jaya Gayatri",
+                                  image: "img/alumini3.png",
+                                  degree: "M.Tech",
+                                  details: [
+                                      "System Engineer, Tata Consultancy Services, Hyderabad",
+                                      "Certified in Fundamentals of Azure by Microsoft.(2020)",
+                                      " Best team award at AXA Equitable, TCS(2020)",
+                                  ],
+                                  workExperiences: [
+                                      "System Engineer at Tata Consultancy Services, Hyderabad (2019‐PRESENT)",
+                                      "Summer Intern at Medisys Hospital, Hyderabad Hospital training on medical equipment(JUNE 2018)",
+                                      "Participated and volunteered in a workshop on ’Recent Advances in Artificial Intelligence for Biomedical Applications’ at Karyashala RAAIBA.(2022)"
+                                  ],
+                                  projects: [
+                                      "M.Tech Final year Research Projec: Deep Learning for coffee influenced SSVEP (MAY 2023)",
+                                      "B.E Final year research project: IOT aided non invasive blood glucose monitoring device(APRIL 2019)",
+                                  ],
+                              },
+                              {
+                                  name: "Vikram Kumar",
+                                  image: "img/alumini4.png",
+                                  degree: "B.Tech",
+                                  details: [
+                                      "Wolfram Research Inc, Cosultant( Quality Assurance Engineer), Bhubaneswar",
+                                      "Web App for Obstructuve Sleep Apnea(OSA) Diagnosis based on Deep learning (2024‐CURRENT)",
+                                      "Statistical Learning and Linear Programming at Tata Institute Of Fundamental Research (TIFR)",
+                                      "Certifications on C,C++,Python,ML from Internshala[2021]",
+                                  ],
+                                  workExperiences: [
+                                      "Web App for Obstructuve Sleep Apnea(OSA) Diagnosis based on Deep learning (2024‐CURRENT)",
+                                      "Statistical Learning and Linear Programming at Tata Institute Of Fundamental Research (TIFR) (2022‐JUNE)",
+                                      "I have taught intermediate students at the Edtech platform,Doubtnut for six months.(2022‐JAN)"
+                                  ],
+                                  projects: [
+                                      "Developed a database infrastructure forthe ledger using Python, based on blockchain technology. Now I am working on implementing Zero Knowledge proof for the verification of transaction in the ledger. IIT Bombay(2023‐DEC)",
+                                      "My research project was to make a mathematical model of microfluidic circular cylinder containing ionic solution used in Lab on a Chip technology and analyze the velocity profile and pathline using Mathematica software and python. IIT Kharagpur(2023‐MAY)",
+                                  ],
+                              },
+                              {
+                                  name: "Usha Rani Kandukuri",
+                                  image: "img/alumini5.png",
+                                  degree: "M.Tech",
+                                  details: [
+                                      " Andhra Pradesh medtech zone,senior fellow,Visakhapatnam",
+                                      "GENERAL PROGRAMMING C,Python,Embedded C, MATLAB.",
+                                      "Statistical Learning and Linear Programming at Tata Institute Of Fundamental Research (TIFR)",
+                                      "Certifications on C,C++,Python,ML from Internshala[2021]",
+                                  ],
+                                  workExperiences: [
+                                      "Obstructive Sleep Apnea detection using deep learning and Constant Q Transform (CQT) images of single‐lead ECG Signals. Conducted data preprocessing, trans‐formation, and model training to achieve accurate res‐ults in sleep apnea detection.(2022‐2023)",
+                                      "Topic: Embedded system Design Short term internship cum Training on ”Embed‐ded System Design”, organised by C DAC Hyderabad.(MAY‐JUNE 2018)",
+                                  ],
+                                  projects: [
+                                      "Project : Validation and Reliability testing of Ayurveda Diagnostic Tools(2019‐2021)",
+                                      "Designed a prototype of Electrical stimulation unit which delivers pulses of electric stimulus of specified parameters to increase healing rate of Diabetic Foot Ulcer.(APRIL 2019)",
+                                      "Participated and presented a paper on ”A Review on Meth‐ods of Treatment for Diabetic Foot Ulcers” in International Conference on Emerging Trends in Engineering, 2019.(2019)",
+                                      "Designed and exhibited a Model on ”Drowsiness Detection using Mobile sensors and Matlab” in Meditech 2017.",
+                                  ],
+                              },
+                          ];
+                          const alumniModal = document.getElementById("alumniModal");
+                          const alumniModalLabel = document.getElementById("alumniModalLabel");
+                          const alumniModalDetails = document.getElementById("alumniModalDetails");
+                          const alumniModalImage = document.getElementById("alumniModalImage");
+                          const alumniModalGallery = document.getElementById("alumniModalGallery");
+                          const alumniModalWorkExperiences = document.getElementById("alumniModalWorkExperiences");
+                          const alumniModalProjects = document.getElementById("alumniModalProjects");
+                          const viewDetailsButtons = document.querySelectorAll(".viewDetailsBtn"); // Select by class
+                          const filterButtons = document.querySelectorAll(".filter-btn");
+                          const slideColumns = document.querySelectorAll(".slide-col");
 
+                          function filterAlumni(filter) {
+                              slideColumns.forEach((column, index) => {
+                                  const alumnus = alumniData[index];
+                                  if (filter === 'all' || alumnus.degree.toLowerCase() === filter.toLowerCase()) {
+                                      column.style.display = 'block';
+                                  } else {
+                                      column.style.display = 'none';
+                                  }
+                              });
+                          }
 
+                          // Add click event listeners to filter buttons
+                          filterButtons.forEach(button => {
+                              button.addEventListener('click', () => {
+                                  const filter = button.getAttribute('data-filter');
+                                  filterAlumni(filter);
+                              });
+                          });
 
-
-    <div class="text-center">
-      
-
-    <div class="bd">
-      <main>
-        <div class="slid">
-          <div class="onei">
-            <div class="slide-col">
-              <div class="content">
-                <!-- <p>
-                  Zen Doan is a business analyst, entrepreneur and media
-                  proprietor, and investor. She also known as the best selling
-                  book author.
-                </p> -->
-                <div 
-                  style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
-                >
-                  <div class="tt" style="width: 50%; ">
-                    <h2>Kakarla Divya Sree</h2>
-                    <p>Fractal Analytics Pvt Ltd | Data Engineer,Bengaluru</p>
-                    <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
-                  
-                    <button class="btn btn-primary mx-1 "  data-toggle="modal" data-target="#alumniModal" data-alumnus-index="">View Details</button>
-                      
-                      <a
-                        class="btn btn-sm-square btn-primary mx-1"
-                        href="https://www.linkedin.com/in/kakarla-divya-sree-2a46891b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
-                        "
-                        target="_blank" style="height: 40px;"
-                        ><i class="fab fa-linkedin-in"></i
-                      ></a>
-                 
-                 
-                  </div>
-
-                  
-                </div>
-
-                
-                </div>
-              </div>
-              <div class="hero">
-                <img src="img/alumini1.png" alt="avatar" />
-              </div>
-            </div>
-
-            <div class="slide-col">
-              <div class="content">
-                <!-- <p>
-                  Zen Doan is a business analyst, entrepreneur and media
-                  proprietor, and investor. She also known as the best selling
-                  book author.
-                </p> -->
-                <div 
-                  style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
-                >
-                  <div class="tt" style="width: 50%; ">
-                    <h2>Garima Singhal</h2>
-                    <p>Project associate<br>IIT roper</p>
-                    
-                    <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
-                  
-                    <button class="btn btn-primary mx-1 "  data-toggle="modal" data-target="#alumniModal" data-alumnus-index="1">View Details</button>
-                      
-                      <a
-                        class="btn btn-sm-square btn-primary mx-1"
-                        href="https://www.linkedin.com/in/garima-singhal-423b611b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                        target="_blank" style="height: 40px;"
-                        ><i class="fab fa-linkedin-in"></i
-                      ></a>
-                 
-                 
-                  </div>
-
-                  
-                </div>
-
-                
-                </div>
-              </div>
-              <div class="hero">
-                <img src="img/alumini2.png" alt="avatar" />
-              </div>
-            </div>
-
-            <div class="slide-col">
-              <div class="content">
-                <!-- <p>
-                  Zen Doan is a business analyst, entrepreneur and media
-                  proprietor, and investor. She also known as the best selling
-                  book author.
-                </p> -->
-                <div 
-                  style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
-                >
-                  <div class="tt" >
-                    <h2>Chekka Jaya Gayatri</h2>
-                    <p>System Engineer<br>TCS<br> Hyderabad</p>
-                    <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
-                  
-                    <button class="btn btn-primary mx-1 " data-toggle="modal" data-target="#alumniModal" data-alumnus-index="1">View Details</button>
-                      
-                      <a
-                        class="btn btn-sm-square btn-primary mx-1"
-                        href="https://www.linkedin.com/in/gayatri-chekka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                        target="_blank" style="height: 40px;"
-                        ><i class="fab fa-linkedin-in"></i
-                      ></a>
-                 
-                 
-                  </div>
-
-                  
-                </div>
-
-                
-                </div>
-              </div>
-              <div class="hero">
-                <img src="img/alumini3.png" alt="avatar" />
-              </div>
-            </div>
-
-            <div class="slide-col">
-              <div class="content">
-                <!-- <p>
-                  Zen Doan is a business analyst, entrepreneur and media
-                  proprietor, and investor. She also known as the best selling
-                  book author.
-                </p> -->
-                <div 
-                  style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
-                >
-                  <div class="tt" >
-                    <h2>Vikram Kumar</h2>
-                    <p>Quality Assurance Engineer<br>Wolfram Research Inc<br>bhuvaneshwar</p>
-                    
-                    <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
-                  
-                    <button class="btn btn-primary mx-1 " data-toggle="modal" data-target="#alumniModal" data-alumnus-index="3">View Details</button>
-                      
-                      <a
-                        class="btn btn-sm-square btn-primary mx-1"
-                        href="http://vikramk.netlify.app"
-                        target="_blank" style="height: 40px;"
-                        ><i class="fab fa-linkedin-in"></i
-                      ></a>
-                 
-                 
-                  </div>
-
-                  
-                </div>
-
-                
-                </div>
-              </div>
-              <div class="hero">
-                <img src="img/alumini4.png" alt="avatar" />
-              </div>
-            </div>
-
-
-            <div class="slide-col">
-              <div class="content">
-                <!-- <p>
-                  Zen Doan is a business analyst, entrepreneur and media
-                  proprietor, and investor. She also known as the best selling
-                  book author.
-                </p> -->
-                <div 
-                  style="display: flex; flex-direction: row;height: 95px;justify-content: space-between;"
-                >
-                  <div class="tt" style="width: 50%; ">
-                    <h2 style="width: 250px;">Usha Rani Kandukuri</h2>
-                    <p>Andhra Pradesh medtech zone,Visakhapatnam</p>
-                    <div class="d-flex justify-content-center" style="margin: 20px;position: relative;left: -45px;">
-                  
-                    <button class="btn btn-primary mx-1 "  data-toggle="modal" data-target="#alumniModal" data-alumnus-index="4">View Details</button>
-                      
-                      <a
-                        class="btn btn-sm-square btn-primary mx-1"
-                        href="https://www.linkedin.com/in/usha-rani-kandukuri?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
-                        "
-                        target="_blank" style="height: 40px;"
-                        ><i class="fab fa-linkedin-in"></i
-                      ></a>
-                 
-                 
-                  </div>
-
-                  
-                </div>
-
-                
-                </div>
-              </div>
-              <div class="hero">
-                <img src="img/alumini5.png" alt="avatar" />
-              </div>
-            </div>
-          </div>
-    <script>
-      const alumniData = [
-  {
-    name: "Kakarla Divya Sree",
-    image: "img/alumini1.png",
-    degree: "B.Tech",
-    details: [
-      "Fractal Analytics Pvt Ltd ,Data Engineer ,Bengaluru",
-      "Academic Excellence Award[2017‐2019](Received academic excellence from Bhashyam Institution.)",
-      "DP203 Microsoft Azure Associate Certification[2023]",
-      "Certifications on C,C++,Python,ML from Internshala[2021]",
-    ],
-    workExperiences: [
-      "Developed a strong proficiency in SQL, Python, PySpark, and gained practical experience in utilizing several Azure services.",
-      "Gained hands-on experience on working with Azure Databricks, Linked Services, and Azure Data Factory, where I have actively contributed to the design and implementation of numerous pipelines and triggers.",
-      "Trained to use ADF pipelines with medallion architecture and trigger pipeline runs along with logic apps to receive success message on successful run.",
-      "Data after distributed computing and several preprocessing techniques views are created using sql/spark pool in synapse",
-    ],
-    projects: [
-      "Python(MAY 2021) : Cricket Fantasy Application In this we develop GUI using Qt designer and the data base of cricketers. Application is built with respect to the conditions mentioned. we can select players from different categories and make a team which will be ev",
-      "Reinforcement Learning(MAY 2023) : Worked on finding the effective point care Diagnosis for sepsis patients using Reinforcent Learning.",
-      "Azure(May 2024) : Maintaining and debugging of pipelines with huge data.ETL operations and building new qlik dashboards",
-    ],
-  },
-  {
-    name: "Garima Singhal",
-    image: "img/alumini2.png",
-    degree: "M.Tech",
-    details: [
-      "Treymont Inc.",
-      " Secured All India Rank (AIR)- 573 in GATE Biotechnology 2022, conducted by IIT Kharagpur.",
-      "Recipient of Gold medal for B.Tech. in Biotechnology (Banasthali Vidyapith-2018-2022) ",
-    ],
-    workExperiences: [
-      "Optimizing Convolutional Neural Network (CNN) Models for Efficient Skin Cancer Classification: A Transfer Learning Approach under NIT Rourkela, Department of Biotechnology and Medical Engineering   (Oct 2023 – Present)",
-      "A systematic review on the estimation of human upper airway volume using 2‐dimensional imaging modalities in validation with 3‐dimensional imaging modalities under NIT Rourkela, Department of Biotechnology and Medical Engineering    (July 2023 ‐ Sept 2023)",
-      "Analyzing the effect of coffee consumption on visual pathway using Visual Evoked Potential (VEP) signals and machine learning algorithms under NIT Rourkela, Department of Biotechnology and Medical Engineering    (May 2023 ‐ June 2023)",
-    ],
-    projects: [
-      "Understanding the degeneration of bone and cartilage during Aging and Osteoarthritis with Indian Institute of Technology (IIT), Ropar (June 2022 ‐ July 2022)",
-      "Implications of central metabolism in disease severity using in‐host modeling of SARS‐CoV2 infection with Indian Institute of Technology (IIT), Delhi, Department of Biochemical Engineering and Biotechnology (June 2021 ‐ Dec 2021)",
-      "Generation of antibodies against low molecular weight compounds with National Institute of Health and Family Welfare, Department of Reproductive BioMedicine, New Delhi (May 2020 ‐ June 2020)",
-    ],
-  },
-  {
-    name: "Chekka Jaya Gayatri",
-    image: "img/alumini3.png",
-    degree: "M.Tech",
-    details: [
-      "System Engineer, Tata Consultancy Services, Hyderabad",
-      "Certified in Fundamentals of Azure by Microsoft.(2020)",
-      " Best team award at AXA Equitable, TCS(2020)",
-    ],
-    workExperiences: [
-      "System Engineer at Tata Consultancy Services, Hyderabad (2019‐PRESENT)",
-     "Summer Intern at Medisys Hospital, Hyderabad Hospital training on medical equipment(JUNE 2018)",
-     "Participated and volunteered in a workshop on ’Recent Advances in Artificial Intelligence for Biomedical Applications’ at Karyashala RAAIBA.(2022)"
-    ],
-    projects: [
-      "M.Tech Final year Research Projec: Deep Learning for coffee influenced SSVEP (MAY 2023)",
-      "B.E Final year research project: IOT aided non invasive blood glucose monitoring device(APRIL 2019)",
-    ],
-  },
-  {
-    name: "Vikram Kumar",
-    image: "img/alumini4.png",
-    degree: "B.Tech",
-    details: [
-      "Wolfram Research Inc, Cosultant( Quality Assurance Engineer), Bhubaneswar",
-      "Web App for Obstructuve Sleep Apnea(OSA) Diagnosis based on Deep learning (2024‐CURRENT)",
-      "Statistical Learning and Linear Programming at Tata Institute Of Fundamental Research (TIFR)",
-      "Certifications on C,C++,Python,ML from Internshala[2021]",
-    ],
-    workExperiences: [
-      "Web App for Obstructuve Sleep Apnea(OSA) Diagnosis based on Deep learning (2024‐CURRENT)",
-      "Statistical Learning and Linear Programming at Tata Institute Of Fundamental Research (TIFR) (2022‐JUNE)",
-      "I have taught intermediate students at the Edtech platform,Doubtnut for six months.(2022‐JAN)"
-      ],
-    projects: [
-      "Developed a database infrastructure forthe ledger using Python, based on blockchain technology. Now I am working on implementing Zero Knowledge proof for the verification of transaction in the ledger. IIT Bombay(2023‐DEC)",
-      "My research project was to make a mathematical model of microfluidic circular cylinder containing ionic solution used in Lab on a Chip technology and analyze the velocity profile and pathline using Mathematica software and python. IIT Kharagpur(2023‐MAY)",
-      ],
-  },
-  {
-    name: "Usha Rani Kandukuri",
-    image: "img/alumini5.png",
-    degree: "M.Tech",
-    details: [
-      " Andhra Pradesh medtech zone,senior fellow,Visakhapatnam",
-      "GENERAL PROGRAMMING C,Python,Embedded C, MATLAB.",
-      "Statistical Learning and Linear Programming at Tata Institute Of Fundamental Research (TIFR)",
-      "Certifications on C,C++,Python,ML from Internshala[2021]",
-    ],
-    workExperiences: [
-      "Obstructive Sleep Apnea detection using deep learning and Constant Q Transform (CQT) images of single‐lead ECG Signals. Conducted data preprocessing, trans‐formation, and model training to achieve accurate res‐ults in sleep apnea detection.(2022‐2023)",
-      "Topic: Embedded system Design Short term internship cum Training on ”Embed‐ded System Design”, organised by C DAC Hyderabad.(MAY‐JUNE 2018)",
-      ],
-    projects: [
-      "Project : Validation and Reliability testing of Ayurveda Diagnostic Tools(2019‐2021)",
-      "Designed a prototype of Electrical stimulation unit which delivers pulses of electric stimulus of specified parameters to increase healing rate of Diabetic Foot Ulcer.(APRIL 2019)",
-      "Participated and presented a paper on ”A Review on Meth‐ods of Treatment for Diabetic Foot Ulcers” in International Conference on Emerging Trends in Engineering, 2019.(2019)",
-      "Designed and exhibited a Model on ”Drowsiness Detection using Mobile sensors and Matlab” in Meditech 2017.",
-      ],
-  },
-];
-
-const alumniModal = document.getElementById("alumniModal");
-const alumniModalLabel = document.getElementById("alumniModalLabel");
-const alumniModalDetails = document.getElementById("alumniModalDetails");
-const alumniModalImage = document.getElementById("alumniModalImage");
-const alumniModalGallery = document.getElementById("alumniModalGallery");
-const alumniModalWorkExperiences = document.getElementById("alumniModalWorkExperiences");
-const alumniModalProjects = document.getElementById("alumniModalProjects");
-
-const viewDetailsButtons = document.querySelectorAll("[data-alumnus-index]");
-const filterButtons = document.querySelectorAll(".filter-btn");
-const slideColumns = document.querySelectorAll(".slide-col");
-
-function filterAlumni(filter) {
-  slideColumns.forEach((column, index) => {
-    const alumnus = alumniData[index];
-    if (filter === 'all' || alumnus.degree.toLowerCase() === filter.toLowerCase()) {
-      column.style.display = 'block';
-    } else {
-      column.style.display = 'none';
-    }
-  });
-}
-
-// Add click event listeners to filter buttons
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const filter = button.getAttribute('data-filter');
-    filterAlumni(filter);
-  });
-});
-
-
-viewDetailsButtons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    const alumnus = alumniData[index];
-
-    alumniModalLabel.textContent = alumnus.name;
-    alumniModalDetails.innerHTML = "";
-    alumniModalImage.src = alumnus.image;
-    alumniModalGallery.innerHTML = "";
-    alumniModalWorkExperiences.innerHTML = "";
-    alumniModalProjects.innerHTML = "";
-
-    alumnus.details.forEach((detail) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = detail;
-      alumniModalDetails.appendChild(listItem);
-    });
-
-    alumnus.workExperiences.forEach((experience) => {
-      const listItem = document.createElement("li");
-      listItem.classList.add("list-group-item");
-      listItem.textContent = experience;
-      alumniModalWorkExperiences.appendChild(listItem);
-    });
-
-    alumnus.projects.forEach((project) => {
-      const listItem = document.createElement("li");
-      listItem.classList.add("list-group-item");
-      listItem.textContent = project;
-      alumniModalProjects.appendChild(listItem);
-    });
-
-    
-
-   
-
-    const modal = new bootstrap.Modal(alumniModal);
-    modal.show();
-  });
-});
-    </script>
-
+                          viewDetailsButtons.forEach((button) => {
+                              button.addEventListener("click", () => {
+                                  const index = parseInt(button.getAttribute("data-alumnus-index"));
+                                  const alumnus = alumniData[index];
+                                  alumniModalLabel.textContent = alumnus.name;
+                                  alumniModalDetails.innerHTML = "";
+                                  alumniModalImage.src = alumnus.image;
+                                  alumniModalGallery.innerHTML = "";
+                                  alumniModalWorkExperiences.innerHTML = "";
+                                  alumniModalProjects.innerHTML = "";
+                                  alumnus.details.forEach((detail) => {
+                                      const listItem = document.createElement("li");
+                                      listItem.textContent = detail;
+                                      alumniModalDetails.appendChild(listItem);
+                                  });
+                                  alumnus.workExperiences.forEach((experience) => {
+                                      const listItem = document.createElement("li");
+                                      listItem.classList.add("list-group-item");
+                                      listItem.textContent = experience;
+                                      alumniModalWorkExperiences.appendChild(listItem);
+                                  });
+                                  alumnus.projects.forEach((project) => {
+                                      const listItem = document.createElement("li");
+                                      listItem.classList.add("list-group-item");
+                                      listItem.textContent = project;
+                                      alumniModalProjects.appendChild(listItem);
+                                  });
+                                  const modal = new bootstrap.Modal(alumniModal);
+                                  modal.show();
+                              });
+                          });
+                      </script>
     <!-- Footer Start -->
    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5" style="width: 90%;">
